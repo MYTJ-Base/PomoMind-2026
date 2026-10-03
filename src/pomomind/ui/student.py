@@ -3,12 +3,12 @@ import time
 
 import streamlit as st
 
-from pomomind import state
-from pomomind.config import POMODORO_SECONDS, SOUNDS, XP_FLASHCARDS, XP_POMODORO
-from pomomind.i18n import t
-from pomomind.models import ApiSettings
-from pomomind.services import gemini
-from pomomind.services.course_store import course_store
+from src.pomomind import state
+from src.pomomind.config import POMODORO_SECONDS, SOUNDS, XP_FLASHCARDS, XP_POMODORO
+from src.pomomind.i18n import t
+from src.pomomind.models import ApiSettings
+from src.pomomind.services import gemini
+from src.pomomind.services.course_store import course_store
 
 
 def render(api: ApiSettings) -> None:

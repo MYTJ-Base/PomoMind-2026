@@ -6,9 +6,11 @@ This file only wires things together. Features live in the `pomomind` package.
 """
 import streamlit as st
 
-from pomomind import state
-from pomomind.config import APP_ICON, APP_NAME, ROLE_PROFESSOR
-from pomomind.ui import login, professor, sidebar, student
+from src.pomomind import state
+from src.pomomind.config import APP_ICON, APP_NAME, ROLE_PROFESSOR
+from src.pomomind.ui import student
+from src.pomomind.ui import sidebar
+from src.pomomind.ui import login, professor
 
 st.set_page_config(page_title=APP_NAME, page_icon=APP_ICON)
 

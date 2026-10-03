@@ -1,10 +1,10 @@
 """Login screen."""
 import streamlit as st
 
-from pomomind import state
-from pomomind.auth import authenticate
-from pomomind.config import ROLES
-from pomomind.i18n import t
+from src.pomomind import state
+from src.pomomind.auth import authenticate
+from src.pomomind.config import ROLES
+from src.pomomind.i18n import t
 
 
 def render() -> None:

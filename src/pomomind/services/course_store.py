@@ -10,7 +10,7 @@ a database or object storage.
 import threading
 from typing import Optional
 
-from pomomind.models import Course
+from src.pomomind.models import Course
 
 
 class CourseStore:

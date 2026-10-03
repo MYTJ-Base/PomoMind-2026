@@ -8,8 +8,8 @@ import hashlib
 import hmac
 from typing import Optional
 
-from pomomind.config import ROLE_PROFESSOR, ROLE_STUDENT
-from pomomind.models import User
+from src.pomomind.config import ROLE_PROFESSOR, ROLE_STUDENT
+from src.pomomind.models import User
 
 
 def hash_password(password: str) -> str:

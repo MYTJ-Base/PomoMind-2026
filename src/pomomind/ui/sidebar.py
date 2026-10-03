@@ -1,10 +1,10 @@
 """Sidebar: language picker (always) and account panel (logged-in only)."""
 import streamlit as st
 
-from pomomind import state
-from pomomind.config import LANGUAGES, ROLE_STUDENT
-from pomomind.i18n import LANGUAGE_KEY, t
-from pomomind.models import ApiSettings
+from src.pomomind import state
+from src.pomomind.config import LANGUAGES, ROLE_STUDENT
+from src.pomomind.i18n import LANGUAGE_KEY, t
+from src.pomomind.models import ApiSettings
 
 
 def language_selector() -> None:

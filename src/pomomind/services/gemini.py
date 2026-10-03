@@ -4,14 +4,14 @@ import time
 from google import genai
 from google.genai import types
 
-from pomomind import prompts
-from pomomind.config import (
+from src.pomomind import prompts
+from src.pomomind.config import (
     FLASHCARD_COUNT,
     FLASHCARD_MODEL,
     VALID_MARKER,
     VERIFY_MODELS,
 )
-from pomomind.models import ApiSettings, Course, Verdict
+from src.pomomind.models import ApiSettings, Course, Verdict
 
 DEMO_FLASHCARDS = """\
 ### 🧬 Demo Flashcard 1

@@ -3,11 +3,11 @@ import time
 
 import streamlit as st
 
-from pomomind.config import BROADCAST_COOLDOWN_SECONDS
-from pomomind.i18n import t
-from pomomind.models import ApiSettings, Course
-from pomomind.services import gemini
-from pomomind.services.course_store import course_store
+from src.pomomind.config import BROADCAST_COOLDOWN_SECONDS
+from src.pomomind.i18n import t
+from src.pomomind.models import ApiSettings, Course
+from src.pomomind.services import gemini
+from src.pomomind.services.course_store import course_store
 
 
 def render(api: ApiSettings) -> None:

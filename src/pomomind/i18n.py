@@ -1,8 +1,8 @@
 """Translation helper. Usage: t("login.title") or t("sidebar.title", role="Student")."""
 import streamlit as st
 
-from pomomind.config import DEFAULT_LANGUAGE
-from pomomind.locales import STRINGS
+from src.pomomind.config import DEFAULT_LANGUAGE
+from src.pomomind.locales import STRINGS
 
 LANGUAGE_KEY = "language"  # st.session_state key set by the sidebar selector
 

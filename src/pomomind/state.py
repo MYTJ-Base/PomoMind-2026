@@ -1,8 +1,8 @@
 """Session-state helpers. Every key in st.session_state is declared here."""
 import streamlit as st
 
-from pomomind.config import STARTING_XP, ROLE_STUDENT
-from pomomind.models import User
+from src.pomomind.config import STARTING_XP, ROLE_STUDENT
+from src.pomomind.models import User
 
 DEFAULTS = {
     "logged_in": False,
