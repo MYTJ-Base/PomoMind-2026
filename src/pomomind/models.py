@@ -1,6 +1,7 @@
 """Small shared data types, so modules don't have to pass loose dicts around."""
 from dataclasses import dataclass
-from typing import Optional
+from datetime import date
+from typing import Optional, Tuple
 
 
 @dataclass(frozen=True)
@@ -33,3 +34,19 @@ class ApiSettings:
 class Verdict:
     approved: bool
     message: str  # raw model answer, shown to the professor when blocked
+
+
+@dataclass(frozen=True)
+class Progress:
+    """A student's saved gamification state."""
+    username: str
+    xp: int
+    streak: int                     # value as last stored; use gamification.effective_streak() to display
+    last_active: Optional[date]     # last day XP was earned
+    badges: Tuple[str, ...] = ()    # badge keys, in the order they were earned
+
+
+@dataclass(frozen=True)
+class AwardResult:
+    progress: Progress
+    new_badges: Tuple[str, ...]     # badges unlocked by this award (may be empty)

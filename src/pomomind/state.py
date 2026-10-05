@@ -1,18 +1,20 @@
 """Session-state helpers. Every key in st.session_state is declared here."""
 import streamlit as st
 
-from src.pomomind.config import STARTING_XP, ROLE_STUDENT
-from src.pomomind.models import User
+from pomomind.config import ROLE_STUDENT
+from pomomind.models import User
 
+# Use immutable defaults (None, (), numbers): a list/dict here would be shared by every session.
 DEFAULTS = {
     "logged_in": False,
     "role": ROLE_STUDENT,
     "username": "",
     "subject": None,
-    "xp": STARTING_XP,
     "last_broadcast_ts": 0.0,  # professor anti-spam timestamp
     "flashcards": None,        # (course filename, generated text)
+    "pending_notices": (),     # toast messages waiting to be shown after the next rerun
 }
+# XP, streak and badges are no longer here: they are saved per user in services/progress_store.py.
 
 
 def init() -> None:
@@ -32,7 +34,3 @@ def log_in(user: User) -> None:
 
 def log_out() -> None:
     st.session_state.clear()
-
-
-def add_xp(amount: int) -> None:
-    st.session_state.xp += amount
