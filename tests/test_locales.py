@@ -1,7 +1,7 @@
 import string
 
-from pomomind.config import LANGUAGES, SOUNDS
-from pomomind.locales import STRINGS
+from src.pomomind.config import LANGUAGES, SOUNDS
+from src.pomomind.locales import STRINGS
 
 
 def _placeholders(text):

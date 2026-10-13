@@ -1,3 +1,7 @@
 .venv/
 .pytest_cache/
 */__pycache__/
+src/pomomind/__pycache__/
+data/
+docs/
+pomomind-gamification-v2/

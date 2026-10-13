@@ -1,5 +1,5 @@
-from pomomind.auth import authenticate
-from pomomind.config import ROLE_PROFESSOR, ROLE_STUDENT
+from src.pomomind.auth import authenticate
+from src.pomomind.config import ROLE_PROFESSOR, ROLE_STUDENT
 
 
 def test_valid_student_login():

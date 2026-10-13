@@ -1,5 +1,5 @@
-from pomomind.models import Course
-from pomomind.services.course_store import CourseStore
+from src.pomomind.models import Course
+from src.pomomind.services.course_store import CourseStore
 
 
 def test_empty_store_has_no_course():
